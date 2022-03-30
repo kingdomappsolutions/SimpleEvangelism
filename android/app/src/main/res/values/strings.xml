@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Simple Evangelism</string>
+    <string name="title_activity_main">Simple Evangelism</string>
+    <string name="package_name">tech.kingdomappsolutions.simpleevangelism</string>
+    <string name="custom_url_scheme">tech.kingdomappsolutions.simpleevangelism</string>
+</resources>

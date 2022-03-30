@@ -1,0 +1,41 @@
+.top {
+    margin-top: 20px;
+}
+
+p {
+    text-align: center !important;
+    font-size: 20px !important;
+}
+
+.card-text {
+    font-size: 20px;
+    text-align: center;
+}
+
+.toast-center {
+    text-align: center;
+}
+
+h1 {
+    text-align: center !important;
+    font-weight: bold;
+}
+
+.prayer {
+    text-align: left !important;
+    color: gold;
+}
+
+h2 {
+    color: lightgreen;
+}
+
+.growth {
+    text-align: left !important;
+    font-size: 20px !important;
+}
+
+h6 {
+    color: var(--ion-color-success-shade);
+    text-align: center;
+}

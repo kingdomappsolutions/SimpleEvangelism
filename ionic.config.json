@@ -1,5 +1,7 @@
 {
-  "name": "SimpleEvangelism",
-  "integrations": {},
+  "name": "Simple Evangelism",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }
