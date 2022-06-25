@@ -1,69 +1,90 @@
 // Ionic & React imports
-import { IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonTitle, IonToolbar } from '@ionic/react'
-import { useLocation } from 'react-router-dom'
+import {
+    IonContent,
+    IonHeader,
+    IonIcon,
+    IonItem,
+    IonLabel,
+    IonList,
+    IonListHeader,
+    IonMenu,
+    IonMenuToggle,
+    IonNote,
+    IonTitle,
+    IonToolbar,
+} from "@ionic/react"
+import { useLocation } from "react-router-dom"
 
 // Icon imports
-import { home, help as helpIcon, book, heart, leaf, alertCircle, alert } from 'ionicons/icons'
+import {
+    home,
+    help as helpIcon,
+    book,
+    heart,
+    leaf,
+    alertCircle,
+    alert,
+} from "ionicons/icons"
 
 // CSS imports
-import '../pages/styles.css';
-import './Menu.css';
-  
+import "../pages/styles.css"
+import "./Menu.css"
+
 interface AppPages {
-    url: string;
-    iosIcon: string;
-    mdIcon: string;
-    title: string;
+    url: string
+    iosIcon: string
+    mdIcon: string
+    title: string
 }
-  
+
 const appPages: AppPages[] = [
     {
-        title: 'Home',
-        url: '/home',
+        title: "Home",
+        url: "/home",
         iosIcon: home,
-        mdIcon: home
+        mdIcon: home,
     },
     {
-        title: 'Foundational Questions',
-        url: '/questions',
+        title: "Foundational Questions",
+        url: "/questions",
         iosIcon: helpIcon,
-        mdIcon: helpIcon
+        mdIcon: helpIcon,
     },
     {
-        title: 'Scriptures',
-        url: '/scriptures',
+        title: "Scriptures",
+        url: "/scriptures",
         iosIcon: book,
-        mdIcon: book
+        mdIcon: book,
     },
     {
-        title: 'Objections',
-        url: '/objections',
+        title: "Objections",
+        url: "/objections",
         iosIcon: alert,
-        mdIcon: alert
+        mdIcon: alert,
     },
     {
-        title: 'Commitment',
-        url: '/commitment',
+        title: "Commitment",
+        url: "/commitment",
         iosIcon: heart,
-        mdIcon: heart
+        mdIcon: heart,
     },
     {
-        title: 'Growth',
-        url: '/growth',
+        title: "Growth",
+        url: "/growth",
         iosIcon: leaf,
-        mdIcon: leaf
+        mdIcon: leaf,
     },
     {
-        title: 'About Simple Evangelism',
-        url: '/about',
+        title: "About Simple Evangelism",
+        url: "/about",
         iosIcon: alertCircle,
-        mdIcon: alertCircle
-    }
+        mdIcon: alertCircle,
+    },
 ]
-  
+
 const Menu: React.FC = () => {
     const location = useLocation()
-  
+
     return (
         <IonMenu contentId="main">
             <IonHeader>
@@ -78,9 +99,23 @@ const Menu: React.FC = () => {
                     {appPages.map((appPage, index) => {
                         return (
                             <IonMenuToggle key={index} autoHide={false}>
-                                <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
-                                <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
-                                <IonLabel>{appPage.title}</IonLabel>
+                                <IonItem
+                                    className={
+                                        location.pathname === appPage.url
+                                            ? "selected"
+                                            : ""
+                                    }
+                                    routerLink={appPage.url}
+                                    routerDirection="none"
+                                    lines="none"
+                                    detail={false}
+                                >
+                                    <IonIcon
+                                        slot="start"
+                                        ios={appPage.iosIcon}
+                                        md={appPage.mdIcon}
+                                    />
+                                    <IonLabel>{appPage.title}</IonLabel>
                                 </IonItem>
                             </IonMenuToggle>
                         )
@@ -90,6 +125,5 @@ const Menu: React.FC = () => {
         </IonMenu>
     )
 }
-  
+
 export default Menu
-  
